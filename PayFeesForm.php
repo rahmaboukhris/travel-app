@@ -21,5 +21,7 @@ class PayFeesForm extends Form
             $validator
                 ->requirePresence("payment[payment_made_by]",true,['message' => 'This value is required '])
                 ->notEmpty('payment.payment_made_by');
+                ->notEmpty('payment.payment_made_by');
+                ->notEmpty('payment.payment_made_by');
     }
 }
