@@ -1,2 +1,7 @@
 name: sonarqube
 language: php
+before_install:
+wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip 11
+unzip sonar-scanner-cli-3.3.0.1492-linux.zip -d /tmp
+script:
+/tmp/sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT -Dsonar.sources=. -Dsonar.host.url=$SONAR_URL -Dsonar.login=$SONAR_LOGIN
